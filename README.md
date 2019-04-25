@@ -13,4 +13,4 @@ the robot navigating the lab can be seen below.
 
 # Video Demonstration
 
-[![Four-Corners](https://youtu.be/LVPX4B8dtT8)](https://youtu.be/LVPX4B8dtT)
+[![Four-Corners](https://www.youtube.com/watch?v=LVPX4B8dtT8&feature=youtu.be)](https://www.youtube.com/watch?v=LVPX4B8dtT8&feature=youtu.be)
