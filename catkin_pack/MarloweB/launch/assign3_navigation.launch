@@ -1,0 +1,6 @@
+<launch>
+
+  <!-- Autonomous navigation script -->
+  <node pkg="MarloweB" name="cis693_assign3" type="assign3.py"/>
+  
+</launch>
