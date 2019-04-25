@@ -11,10 +11,6 @@ from std_srvs.srv import *
 
 '''
 Name: Brandon Marlowe
-Class: CIS 693
-Project: 3
-Date: 2/14/18
-ID: 2693414
 ---------------------
 Sends control signals to Turtlebot to navigate to four corners of engineering lab.
 '''
