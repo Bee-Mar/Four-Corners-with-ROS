@@ -1,0 +1,6 @@
+<launch>
+
+  <!-- Autonomous navigation script -->
+  <node pkg="MarloweB" name="four-corners" type="four-corners.py"/>
+
+</launch>

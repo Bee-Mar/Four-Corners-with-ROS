@@ -45,15 +45,17 @@ def dist_from_goal(goal_x, goal_y):
 def go_to_goal(x_goal, y_goal, w_goal, seq):
 
     # mbs_pub is short for move_base_simple_publisher
-    mbs_pub = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=15)
+    mbs_pub = rospy.Publisher('/move_base_simple/goal',
+                              PoseStamped, queue_size=15)
     rospy.sleep(1.0)
 
-        for index in range(len(test_goal_poses)):
+    for index in range(len(test_goal_poses)):
 
-            go_to_goal(test_goal_poses[index][0], test_goal_poses[index][1], test_goal_poses[index][2], index)
+        go_to_goal(test_goal_poses[index][0], test_goal_poses[index]
+                   [1], test_goal_poses[index][2], index)
 
-            while True:
-    # ps_goal is short for PoseStamped_goal
+        while True:
+            # ps_goal is short for PoseStamped_goal
     ps_goal = PoseStamped()
 
     # placing goal destination in PoseStamped publisher
@@ -74,13 +76,15 @@ def go_to_goal(x_goal, y_goal, w_goal, seq):
 def visit_corners():
 
     # coordinates for the back left, back right, top left, and top right corners
-    goal_coord = [[-2.48, 5.03, 1.05], [1.07, 4.81, -0.751], [-2.19, 1.02, 0.681], [2.53, -0.81, 0.014]]
+    goal_coord = [[-2.48, 5.03, 1.05], [1.07, 4.81, -0.751],
+                  [-2.19, 1.02, 0.681], [2.53, -0.81, 0.014]]
 
     # looping through coordinates and publishing each as a new goal destination
     for index in range(len(goal_coord)):
 
         # (x, y, orientation) -- the index is used as the sequence number
-        go_to_goal(goal_coord[index][0], goal_coord[index][1], goal_coord[index][2], index)
+        go_to_goal(goal_coord[index][0], goal_coord[index]
+                   [1], goal_coord[index][2], index)
 
         while True:
 
@@ -105,12 +109,10 @@ if __name__ == "__main__":
 
     try:
         # initializes node
-        rospy.init_node('cis693_assign3_node', anonymous=False)
+        rospy.init_node('four_corners_node', anonymous=False)
 
         # run main method
         main()
 
     except rospy.ROSInterruptException or rospy.ROSException:
         pass
-
-

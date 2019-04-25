@@ -1,20 +1,20 @@
 <launch>
 
   <!-- Start robot base driver -->
-  
+
   <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
 
   <!-- Load map of Robotics lab -->
-  <arg name="map_file" value="$(find MarloweB)/maps/cis693_assign3.yaml"/>
+  <arg name="map_file" value="$(find MarloweB)/maps/four-corners.yaml"/>
   <node name="map_server_node" pkg="map_server" type="map_server" args="$(arg map_file)" />
-	
+
   <!-- Start RVIZ -->
   <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
 
   <!-- Start AMCL Demo -->
   <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch">
-	  <arg name="map_file" value="$(find MarloweB)/maps/cis693_assign3.yaml"/>  
+	  <arg name="map_file" value="$(find MarloweB)/maps/four-corners.yaml"/>
   </include>
 
-  
+
 </launch>
